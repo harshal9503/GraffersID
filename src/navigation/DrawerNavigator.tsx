@@ -1,0 +1,15 @@
+import React from 'react';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import HomeTabs from './HomeTabs';
+import StaticScreen from '../screens/Static/StaticScreen';
+
+const Drawer = createDrawerNavigator();
+
+export default function DrawerNavigator() {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen name="Home" component={HomeTabs} />
+      <Drawer.Screen name="About" component={StaticScreen} />
+    </Drawer.Navigator>
+  );
+}
